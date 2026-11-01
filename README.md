@@ -4,13 +4,21 @@ Customize your notification badges with adaptive colors, text colors and borders
 
 An iOS 26 compatibility port of **Tinge 1.2.2 by P2KDev (@p2kdev)**, ported by **sahinkaa**. The original developer credit and settings icon are preserved.
 
-## Download 1.0
+## Download 1.0.1
 
-[Download Tinge 26 1.0 and read the release notes](https://github.com/sahinkaa/Tinge26/releases/tag/v1.0).
+[Download Tinge 26 1.0.1 and read the release notes](https://github.com/sahinkaa/Tinge26/releases/tag/v1.0.1).
 
-- **RootHide:** `com.sahinkaa.tinge26_1.0_iphoneos-arm64e.deb` — install directly, **without Patcher**.
-- **Standard rootless:** `com.sahinkaa.tinge26_1.0_iphoneos-arm64.deb`.
-- Both packages are version **1.0**. Choose the one matching your jailbreak.
+- **RootHide:** `com.sahinkaa.tinge26_1.0.1_iphoneos-arm64e.deb` - install directly, **without Patcher**.
+- **Standard rootless:** `com.sahinkaa.tinge26_1.0.1_iphoneos-arm64.deb`.
+- Both packages are version **1.0.1**. Choose the one matching your jailbreak.
+
+## New in 1.0.1
+
+Adaptive badge backgrounds respond sooner when notifications arrive or badge counts change. Valid icon colors are reused immediately when available, count changes retain the same icon's color and failed captures get bounded early retries. Existing paint remains visible while the same icon refreshes. Stale callbacks cannot recolor reused badges or a different folder winner.
+
+Static backgrounds, text colors, borders, highest-count folder colors and the animated text-transition safeguard retain their existing behavior. No additional runtime hook targets, recurring timers or background services were added.
+
+This build was tested for several days on iPhone 11 Pro Max, iOS 26.0.1, Dopamine 3 RootHide with no problems reported. This does not extend compatibility claims to other devices or the rootless build.
 
 ## Features
 
@@ -41,7 +49,7 @@ Some folders may need to be opened once before their highest-badged app's color 
 
 ## Source and credits
 
-Download **Tinge26_1.0_source.zip** from the release for the port implementation, prebuilt core inputs and build instructions. Use **SHA256SUMS** to verify the assets. GitHub's automatic source archives contain the repository snapshot; use the dedicated source asset for the implementation.
+Download **Tinge26_1.0.1_source.zip** from the release for the port implementation, prebuilt core inputs and build instructions. Use **SHA256SUMS** to verify the assets. GitHub's automatic source archives contain the repository snapshot; use the dedicated source asset for the implementation.
 
 Original implementation source was not supplied. The archive includes the unchanged compatibility core as prebuilt binaries and does not assign it a new license.
 
