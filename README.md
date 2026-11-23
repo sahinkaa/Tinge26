@@ -1,56 +1,32 @@
 # Tinge 26
 
-Customize your notification badges with adaptive colors, text colors and borders.
+<img src="assets/Tinge26-Icon-v1.0.2.png" alt="Tinge 26 four-badge icon" width="224">
 
-An iOS 26 compatibility port of **Tinge 1.2.2 by P2KDev (@p2kdev)**, ported by **sahinkaa**. The original developer credit and settings icon are preserved.
+Tinge 26 customizes Home Screen notification badges on iOS 26. Match badge colors to each app icon or choose your own, then fine-tune the text contrast and border with a live preview.
 
-## Download 1.0.1
+[Download Tinge 26 v1.0.2 for RootHide](https://github.com/sahinkaa/Tinge26/releases/tag/v1.0.2)
 
-[Download Tinge 26 1.0.1 and read the release notes](https://github.com/sahinkaa/Tinge26/releases/tag/v1.0.1).
+## Live preview
 
-- **RootHide:** `com.sahinkaa.tinge26_1.0.1_iphoneos-arm64e.deb` - install directly, **without Patcher**.
-- **Standard rootless:** `com.sahinkaa.tinge26_1.0.1_iphoneos-arm64.deb`.
-- Both packages are version **1.0.1**. Choose the one matching your jailbreak.
+The preview shows four installed apps with badge counts of **1, 8, 64 and 128**. Tap an icon to try another app. Adjustments appear immediately in the preview.
 
-## New in 1.0.1
-
-Adaptive badge backgrounds respond sooner when notifications arrive or badge counts change. Valid icon colors are reused immediately when available, count changes retain the same icon's color and failed captures get bounded early retries. Existing paint remains visible while the same icon refreshes. Stale callbacks cannot recolor reused badges or a different folder winner.
-
-Static backgrounds, text colors, borders, highest-count folder colors and the animated text-transition safeguard retain their existing behavior. No additional runtime hook targets, recurring timers or background services were added.
-
-This build was tested for several days on iPhone 11 Pro Max, iOS 26.0.1, Dopamine 3 RootHide with no problems reported. This does not extend compatibility claims to other devices or the rootless build.
+<img src="assets/Tinge26-Settings-v1.0.2.png" alt="Tinge 26 Settings with four live badge previews and adaptive color controls" width="380">
 
 ## Features
 
-- Adaptive colors from SpringBoard-rendered app icons, including themed icons.
-- Folder badge colors follow the eligible app with the highest badge count; numbers remain unchanged.
-- Safe animated badge updates as notifications arrive or counts change.
-- Static backgrounds, text colors and border customization.
-- Native settings and color picker with verified saves.
-- Original settings icon, Respring as the only action row, balanced spacing and a tappable GitHub credit.
-- Separate native RootHide and standard rootless builds.
-
-## Compatibility
-
-**Confirmed working only on iPhone 11 Pro Max, iOS 26.0.1, Dopamine 3 RootHide.**
-
-On-device compatibility for the standard rootless variant and for other devices, iOS versions or jailbreaks has not been confirmed.
+- Adaptive badge backgrounds use colors from rendered app icons, including themed icons.
+- Set text and border colors separately. Borders can adapt, match the text or use a static color.
+- Adjust adaptive shade differences for text and borders independently. Set the border width to zero for a borderless badge.
+- Folder badges use the color of the eligible app with the highest badge count.
 
 ## Install
 
-1. Close Settings and keep a backup of your current preferences.
-2. Install the package matching your jailbreak. On RootHide, use the **iphoneos-arm64e** file directly, without Patcher.
-3. Allow replacement of another Tinge installation if present, preserving settings if desired.
-4. Respring and open **Settings → Tinge 26**.
+The v1.0.2 download is for **RootHide**. Install the **iphoneos-arm64e** package directly, without Patcher. Respring and open **Settings → Tinge 26**. Changing the main Enabled switch requires a respring.
 
-PreferenceLoader, a Substrate-compatible loader and libcolorpicker are required. RootHide also requires rootless-compat for the preserved original core. Keep both **Tinge** and **ZZTingeAdaptiveBridge** enabled for SpringBoard.
+PreferenceLoader, a Substrate-compatible loader and libcolorpicker are required. RootHide also requires rootless-compat for the original compatibility core. Keep both **Tinge** and **ZZTingeAdaptiveBridge** enabled for SpringBoard.
 
-Some folders may need to be opened once before their highest-badged app's color becomes available.
+[V1.0.1 packages, compatibility notes and source archive](https://github.com/sahinkaa/Tinge26/releases/tag/v1.0.1)
 
-## Source and credits
+## Credits
 
-Download **Tinge26_1.0.1_source.zip** from the release for the port implementation, prebuilt core inputs and build instructions. Use **SHA256SUMS** to verify the assets. GitHub's automatic source archives contain the repository snapshot; use the dedicated source asset for the implementation.
-
-Original implementation source was not supplied. The archive includes the unchanged compatibility core as prebuilt binaries and does not assign it a new license.
-
-Original Tinge: **P2KDev (@p2kdev)**. iOS 26 port: **sahinkaa**. The rendered-icon sampling approach was informed by [w1tu's ntfy](https://github.com/w1tu/ntfy); its MIT notice is retained in the source archive.
+Original Tinge by **P2KDev (@p2kdev)**. Tinge 26 by **sahinkaa**. The icon sampling approach was informed by [w1tu’s ntfy](https://github.com/w1tu/ntfy).
